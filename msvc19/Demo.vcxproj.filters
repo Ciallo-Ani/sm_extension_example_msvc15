@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SourceMod SDK">
+      <UniqueIdentifier>{622f0982-c6f7-42a9-b6b7-26011b726448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{47100284-06f4-4398-b2e3-be06d983fc47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{13f71d28-6238-41eb-813b-091bec674117}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
