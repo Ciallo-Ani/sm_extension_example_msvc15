@@ -2,8 +2,9 @@
 #define _INCLUDE_SOURCEMOD_EXTENSION_PROPER_H_
 
 #include "smsdk_ext.h"
+#include <igameevents.h>
 
-class Demo : public SDKExtension
+class Demo : public SDKExtension, public IGameEventListener2
 {
 public:
 	/**
@@ -21,6 +22,9 @@ public:
 	 */
 	virtual void SDK_OnUnload();
 
+	virtual void FireGameEvent(IGameEvent* event);
+
+	virtual int	 GetEventDebugID(void) { return 42; }
 	/**
 	 * @brief This is called once all known extensions have been loaded.
 	 * Note: It is is a good idea to add natives here, if any are provided.
@@ -50,7 +54,7 @@ public:
 	 * @param late			Whether or not Metamod considers this a late load.
 	 * @return				True to succeed, false to fail.
 	 */
-	//virtual bool SDK_OnMetamodLoad(ISmmAPI *ismm, char *error, size_t maxlen, bool late);
+	virtual bool SDK_OnMetamodLoad(ISmmAPI *ismm, char *error, size_t maxlen, bool late);
 
 	/**
 	 * @brief Called when Metamod is detaching, after the extension version is called.
