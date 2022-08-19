@@ -25,6 +25,8 @@ void Demo::SDK_OnUnload()
 bool Demo::SDK_OnMetamodLoad(ISmmAPI* ismm, char* error, size_t maxlen, bool late)
 {
 	GET_V_IFACE_CURRENT(GetEngineFactory, eventmanager, IGameEventManager2, INTERFACEVERSION_GAMEEVENTSMANAGER2);
+	
+	return true;
 }
 
 void Demo::FireGameEvent(IGameEvent* event)
